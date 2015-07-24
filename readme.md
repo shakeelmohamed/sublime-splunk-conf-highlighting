@@ -2,7 +2,7 @@
 
 Sublime Text is awesome! But, there's no great way to get syntax highlighting for a .conf file... until now!
 
-*Only tested on Sublime Text 3**
+**Only tested on Sublime Text 3**
 
 ![screenshot](screenshot.png)
 
