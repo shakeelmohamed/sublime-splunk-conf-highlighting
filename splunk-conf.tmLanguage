@@ -40,7 +40,7 @@
 			<key>comment</key>
 			<string>conf setting key</string>
 			<key>match</key>
-			<string>^\w+</string>
+			<string>^[\w+\.\-\:]+</string>
 			<key>name</key>
 			<string>support.function</string>
 		</dict>

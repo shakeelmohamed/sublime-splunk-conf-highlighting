@@ -22,7 +22,7 @@
             "comment": "Stanza Name, any line with '[xyz]'"
         },
         {
-            "match": "^\\w+",
+            "match": "^[\\w+\\.\\-\\:]+",
             "name": "support.function",
             "comment": "conf setting key"
         },
