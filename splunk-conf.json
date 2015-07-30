@@ -18,7 +18,7 @@
         },
         {
             "match": "^\\[.*\\]$",
-            "name": "entity.name.function.stanzaname",
+            "name": "entity.name.function",
             "comment": "Stanza Name, any line with '[xyz]'"
         },
         {
@@ -28,7 +28,7 @@
         },
         {
             "match": "=",
-            "name": "keyword.operator.stanzaname",
+            "name": "keyword.operator",
             "comment": "Equals Sign"
         }
     ]
