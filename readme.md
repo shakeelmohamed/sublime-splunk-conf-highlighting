@@ -14,7 +14,7 @@ Sublime Text is awesome! But, there's no great way to get syntax highlighting fo
 
 ## Installation
 
-* Install it from [Package Control](https://packagecontrol.io/) - **pending**
+* Install it from [Package Control](https://packagecontrol.io/) - search for `Splunk Conf File Syntax Highlighting`
 
  
 ### Manual Installation
