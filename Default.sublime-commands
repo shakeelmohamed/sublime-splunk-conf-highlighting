@@ -1,0 +1,4 @@
+[{
+  "caption": "Validate Splunk .conf files (btool check)",
+  "command": "btool"
+}]
