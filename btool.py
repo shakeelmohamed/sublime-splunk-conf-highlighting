@@ -8,7 +8,7 @@ import sublime_plugin
  * Test on Sublime Text 2
  * Test on Windows
  * Test on Linux
- * Parse the btool output, and highlight those lines - also potentially open files
+ * Parse the btool output, and highlight those lines - also potentially open files (http://docs.sublimetext.info/en/latest/reference/build_systems/configuration.html#build-capture-error-output)
  * Investigate file_regex
  * Investigate line_regex
  * Investigate using a setting for SPLUNK_HOME
