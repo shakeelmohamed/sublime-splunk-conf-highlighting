@@ -8,6 +8,10 @@
 		<string>conf.example</string>
 		<string>conf.default</string>
 		<string>conf.spec</string>
+		<string>conf.in</string>
+		<string>conf.example.in</string>
+		<string>conf.spec.in</string>
+		<string>cfg.spec.in</string>
 	</array>
 	<key>name</key>
 	<string>Splunk Conf file</string>
