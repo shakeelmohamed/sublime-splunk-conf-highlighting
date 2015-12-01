@@ -2,7 +2,16 @@
 {
     "name": "Splunk Conf file",
     "scopeName": "source.splunk-conf",
-    "fileTypes": ["conf", "conf.example", "conf.default", "conf.spec"],
+    "fileTypes": [
+        "conf",
+        "conf.example",
+        "conf.default",
+        "conf.spec",
+        "conf.in",
+        "conf.example.in",
+        "conf.spec.in",
+        "cfg.spec.in"
+    ],
     "uuid": "f0634410-b562-4325-b1d1-348949cfa5bd",
 
     "patterns": [
