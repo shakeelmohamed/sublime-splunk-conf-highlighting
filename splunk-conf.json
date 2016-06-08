@@ -31,14 +31,17 @@
             "comment": "Stanza Name, any line with '[xyz]'"
         },
         {
-            "match": "^[\\w+\\.\\-\\:]+",
-            "name": "support.function",
-            "comment": "conf setting key"
-        },
-        {
-            "match": "=",
-            "name": "keyword.operator",
-            "comment": "Equals Sign"
+            "comment": "Setting (can be multiline). Begins with 'key=', ends with newline without backslash",
+            "begin":"^([^\\s=]+)[ ]*(=)",
+            "beginCaptures": {
+                "1": {
+                    "name": "support.function"
+                },
+                "2": {
+                    "name": "keyword.operator"
+                }
+            },
+            "end":"[^\\\\]\n"
         }
     ]
 }
