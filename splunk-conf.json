@@ -32,7 +32,7 @@
         },
         {
             "comment": "Setting (can be multiline). Begins with 'key=', ends with newline without backslash",
-            "begin":"^([^\\s=]+)[ ]*(=)",
+            "begin":"^\\s*([A-z0-9.$*:\\/\\\\]+)\\s*(=) *",
             "beginCaptures": {
                 "1": {
                     "name": "support.function"
@@ -41,7 +41,7 @@
                     "name": "keyword.operator"
                 }
             },
-            "end":"[^\\\\]\n"
+            "end":"(([^\\\\]\\r?\\n$)|(\\\\\\r?\\n$))"
         }
     ]
 }
