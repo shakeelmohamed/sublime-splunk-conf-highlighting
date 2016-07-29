@@ -14,7 +14,7 @@ class TestSyntaxPatterns(unittest.TestCase):
             self.json_obj = json.loads("".join(lines))
 
         with open("test.conf", "r") as f:
-            self.test_conf_lines = f.readlines()
+            self.test_conf_str = f.read()
 
     def test_form(self):
         expected_keys = [
@@ -28,36 +28,38 @@ class TestSyntaxPatterns(unittest.TestCase):
             self.assertIn(item, self.json_obj)
 
     def test_patterns(self):
-        # TODO: handle the case of begin/end regex
         expected_keys = [
             "match",
             "name",
             "comment"
         ]
         expected_match_counts = {
-            "invalid.illegal": 1,
-            "comment.line": 3,
-            "entity.name.function": 1,
-            "support.function": 1,
-            "keyword.operator": 1
+            "invalid.illegal": 2,
+            "comment.line": 8,
+            "entity.name.function": 2
+        }
+
+        expected_begin_end_counts = {
+            "splunk.conf.setting": 11
         }
 
         patterns = self.json_obj["patterns"]
 
         # make sure test code isn't very broken
         # TODO: make this stricter
-        self.assertEqual(len(expected_match_counts), len(patterns))
+        self.assertEqual(len(expected_match_counts) + len(expected_begin_end_counts), len(patterns))
 
         for p in patterns:
-            for item in expected_keys:
-                self.assertIn(item, p)
-
-            matches = 0
-            for line in self.test_conf_lines:
-                match = re.search(p["match"], line)
-                if match is not None:
-                    matches += 1
-            self.assertEqual(matches, expected_match_counts[p["name"]], p["comment"] + " failed")
+            if p["name"] == "splunk.conf.setting":
+                begin = p["begin"]
+                end = p["end"]
+                matches = re.findall(begin, self.test_conf_str, re.MULTILINE)
+                self.assertEqual(len(matches), expected_begin_end_counts[p["name"]])
+            else:
+                for item in expected_keys:
+                    self.assertIn(item, p)
+                matches = re.findall(p["match"], self.test_conf_str, re.MULTILINE)
+                self.assertEqual(len(matches), expected_match_counts[p["name"]])
 
 if __name__ == '__main__':
     unittest.main()
