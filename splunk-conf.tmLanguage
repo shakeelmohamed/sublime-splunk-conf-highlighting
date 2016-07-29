@@ -42,20 +42,25 @@
 			<string>entity.name.function</string>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>^[\t ]*([A-z0-9.$*:\/\\]+)[\t ]*(=)[\t ]*</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.function</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator</string>
+				</dict>
+			</dict>
 			<key>comment</key>
-			<string>conf setting key</string>
-			<key>match</key>
-			<string>^[\w+\.\-\:]+</string>
-			<key>name</key>
-			<string>support.function</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Equals Sign</string>
-			<key>match</key>
-			<string>=</string>
-			<key>name</key>
-			<string>keyword.operator</string>
+			<string>Setting (can be multiline). Begins with 'key=', ends with newline without backslash</string>
+			<key>end</key>
+			<string>(([^\\]\r?\n$)|(\\\r?\n$))</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
