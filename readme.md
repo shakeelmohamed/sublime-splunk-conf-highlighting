@@ -1,5 +1,7 @@
 # Sublime Text syntax highlighting for .conf files
 
+[![Build Status](https://travis-ci.org/shakeelmohamed/sublime-splunk-conf-highlighting.svg)](https://travis-ci.org/shakeelmohamed/sublime-splunk-conf-highlighting)
+
 Sublime Text is awesome! But, there's no great way to get syntax highlighting for a Splunk .conf file... until now!
 
 **It works with Sublime Text 2 & 3!**
