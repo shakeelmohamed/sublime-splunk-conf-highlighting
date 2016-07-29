@@ -41,7 +41,8 @@
                     "name": "keyword.operator"
                 }
             },
-            "end":"(([^\\\\]\\r?\\n$)|(\\\\\\r?\\n$))"
+            "end":"(([^\\\\]\\r?\\n$)|(\\\\\\r?\\n$))",
+            "name": "splunk.conf.setting"
         }
     ]
 }
