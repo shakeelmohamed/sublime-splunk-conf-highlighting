@@ -32,7 +32,7 @@
         },
         {
             "comment": "Setting (can be multiline). Begins with 'key=', ends with newline without backslash",
-            "begin":"^[\\t ]*([A-z0-9.$*:\\/\\\\]+)[\\t ]*(=)[\\t ]*",
+            "begin": "^[ \\t]*([^\\n\\r ]+)[ \\t]*(=)",
             "beginCaptures": {
                 "1": {
                     "name": "support.function"
@@ -41,7 +41,20 @@
                     "name": "keyword.operator"
                 }
             },
-            "end":"(([^\\\\]\\r?\\n$)|(\\\\\\r?\\n$))",
+            "end":"[ \\t]*([^\\n\\r]+[^\\\\]|[^\\n\\r]+\\\\(\\r?\\n[ \\t]*[^\\n\\r]*\\\\?)*)\\r?\\n",
+            // TODO: break this up into intentionally matching several groups
+            // ie: 1 group just for the first line, etc.
+            "endCaptures": {
+                "1": {
+                    "name": "constant.character"
+                },
+                "2": {
+                    "name": "entity.name.function"
+                },
+                "3": {
+                    "name": "keyword.operator"
+                }
+            },
             "name": "splunk.conf.setting"
         }
     ]
