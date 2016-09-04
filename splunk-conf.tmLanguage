@@ -43,7 +43,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^[\t ]*([A-z0-9.$*:\/\\]+)[\t ]*(=)[\t ]*</string>
+			<string>^[\t ]*(\S+)[\t ]*(=)[\t ]*</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>

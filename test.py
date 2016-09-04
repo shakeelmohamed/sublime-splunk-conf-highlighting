@@ -35,12 +35,12 @@ class TestSyntaxPatterns(unittest.TestCase):
         ]
         expected_match_counts = {
             "invalid.illegal": 2,
-            "comment.line": 8,
+            "comment.line": 9,
             "entity.name.function": 2
         }
 
         expected_begin_end_counts = {
-            "splunk.conf.setting": 11
+            "splunk.conf.setting": 12
         }
 
         patterns = self.json_obj["patterns"]
