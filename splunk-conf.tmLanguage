@@ -59,8 +59,10 @@
 			</dict>
 			<key>comment</key>
 			<string>Setting (can be multiline). Begins with 'key=', ends with newline without backslash</string>
+			<key>contentName</key>
+			<string>string.quoted.double</string>
 			<key>end</key>
-			<string>(([^\\]\r?\n$)|(\\\r?\n$))</string>
+			<string>(?&lt;!\\)\n</string>
 			<key>name</key>
 			<string>splunk.conf.setting</string>
 		</dict>
