@@ -42,7 +42,7 @@
                 }
             },
             "end": "(?<!\\\\)\\n",
-            "contentName": "string.quoted.double",
+            "contentName": "string.unquoted",
             "name": "splunk.conf.setting"
         }
     ]

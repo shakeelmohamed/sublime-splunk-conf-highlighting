@@ -60,7 +60,7 @@
 			<key>comment</key>
 			<string>Setting (can be multiline). Begins with 'key=', ends with newline without backslash</string>
 			<key>contentName</key>
-			<string>string.quoted.double</string>
+			<string>string.unquoted</string>
 			<key>end</key>
 			<string>(?&lt;!\\)\n</string>
 			<key>name</key>

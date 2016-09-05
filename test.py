@@ -40,7 +40,7 @@ class TestSyntaxPatterns(unittest.TestCase):
         }
 
         expected_begin_end_counts = {
-            "splunk.conf.setting": 11
+            "splunk.conf.setting": 12
         }
 
         patterns = self.json_obj["patterns"]
