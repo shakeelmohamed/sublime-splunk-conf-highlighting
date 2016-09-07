@@ -1,17 +1,14 @@
 import unittest
 import json
+import yaml
 import re
 
 
 class TestSyntaxPatterns(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        with open("splunk-conf.json", "r") as f:
-            # skip the first line, expected to be a comment
-            lines = f.readlines()
-            self.first_line = lines[0]
-            lines = lines[1:]
-            self.json_obj = json.loads("".join(lines))
+        with open("splunk-conf.YAML-tmLanguage", "r") as f:
+            self.yaml_obj = yaml.load(f.read())
 
         with open("test.conf", "r") as f:
             self.test_conf_str = f.read()
@@ -25,7 +22,7 @@ class TestSyntaxPatterns(unittest.TestCase):
             "patterns"
         ]
         for item in expected_keys:
-            self.assertIn(item, self.json_obj)
+            self.assertIn(item, self.yaml_obj)
 
     def test_patterns(self):
         expected_keys = [
@@ -43,7 +40,7 @@ class TestSyntaxPatterns(unittest.TestCase):
             "splunk.conf.setting": 12
         }
 
-        patterns = self.json_obj["patterns"]
+        patterns = self.yaml_obj["patterns"]
 
         # make sure test code isn't very broken
         # TODO: make this stricter
