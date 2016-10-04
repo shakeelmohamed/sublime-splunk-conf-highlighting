@@ -60,14 +60,14 @@ Patterns have 3 main attributes:
 
 There are 2 important files here:
 
-* `splunk-conf.json` - The `AAAPackageDev` package compiles this to the following, this JSON file is much easier to use
+* `splunk-conf.YAML-tmLanguage` - The `AAAPackageDev` package compiles this to the following, this YAML file is much easier to use
 * `splunk-conf.tmLanguage` - This is a TextMate language definition file in XML format. SublimeText uses this format, it's a necessary evil.
 
 * Install package control if you haven't already
 * cmd + shift + P (Mac) or ctrl + shift + P (Windows)
     - Install package
     - AAAPackageDev
-* Open `splunk-conf.JSON`
+* Open `splunk-conf.YAML-tmLanguage`
 * cmd + B should update `splunk-conf.tmLanguage`, make a small change and see if it worked. If not, play with your build system settings under Tools -> Build System
 * During development you'll need to constantly copy the `splunk-conf.tmLanguage` into your Sublime Text package folder, like so: `cp splunk-conf.tmLanguage ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/user/splunk-conf.tmLanguage`
 * If something doesn't seem to update, quit & reopen Sublime Text and it should work.
