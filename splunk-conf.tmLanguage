@@ -29,7 +29,7 @@
 			<key>comment</key>
 			<string>A comment</string>
 			<key>match</key>
-			<string>^#.*$</string>
+			<string>^[#@].*$</string>
 			<key>name</key>
 			<string>comment.line</string>
 		</dict>
